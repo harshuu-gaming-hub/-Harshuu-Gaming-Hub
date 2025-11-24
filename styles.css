@@ -128,3 +128,12 @@ h2 {
   cursor: pointer;
   color: #fff;
   font-weight
+.game-card img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto 15px auto;
+  box-shadow: 0 0 20px #00eaff;
+}
