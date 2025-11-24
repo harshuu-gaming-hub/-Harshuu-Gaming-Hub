@@ -1,15 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact - Harshuu Gaming Hub</title>
-<link rel="stylesheet" href="styles.css" />
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 100;
+  box-shadow: 0 2px 20px rgba(255, 0, 200, 0.5);
+}
+
+nav h1 {
+  font-size: 32px;
+  font-weight: 900;
+  color: #ff00c8;
+  text-shadow: 0 0 15px #ff00c8;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+nav a.active {
+  color: #ff00c8;
+  text-shadow: 0 0 10px #ff00c8;
+}
+
+.contact-section {
+  padding: 140px 40px 60px;
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 50px;
+  color: #00eaff;
+  text-shadow: 0 0 20px #00eaff;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+form {
+  background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(255, 0, 200, 0.6);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 2px solid #ff00c8;
+  border-radius: 10px;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #00eaff;
+  box-shadow: 0 0 15px #00eaff;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #ff00c8, #00eaff);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 30px #ff00c8;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 50px #00eaff;
+}
+
+.contact-info {
+  margin-top: 40px;
+  text-align: left;
+  background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 234, 255, 0.4);
+}
+
+.contact-info h3 {
+  color: #ff00c8;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.contact-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #000;
+  border-top: 2px solid #ff00c8;
+  margin-top: 60px;
+  color: #00eaff;
+}
+</style>
 </head>
 <body>
+
 <nav>
-  <h1 class="logo"><a href="index.html">Harshuu Gaming Hub</a></h1>
-  <div class="nav-links">
+  <h1>🎮 Harshuu Gaming Hub</h1>
+  <div>
     <a href="index.html">Home</a>
     <a href="games.html">Games</a>
     <a href="about.html">About</a>
@@ -17,27 +165,29 @@
   </div>
 </nav>
 
-<section class="section-padding contact-section">
+<section class="contact-section">
   <h2>Contact Us</h2>
-  <p>We welcome all feedback, questions, and partnership inquiries. Reach out to us and join our growing gaming community! We strive for quick responses and user satisfaction.</p>
-  
-  <form action="#" method="post" class="contact-form">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
+  <p>We'd love to hear from you! Whether you have questions, feedback, partnership inquiries, or need support—reach out to us and we'll respond as quickly as possible.</p>
+
+  <form>
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
     <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
     <button type="submit">Send Message</button>
   </form>
 
   <div class="contact-info">
-    <h3>Other ways to connect:</h3>
-    <p>Email: support@harshuugaminghub.com</p>
-    <p>Phone: +91 12345 67890</p>
-    <p>Follow us on social media for latest updates and giveaways!</p>
+    <h3>📧 Other Ways to Connect:</h3>
+    <p><strong>Email:</strong> support@harshuugaminghub.com</p>
+    <p><strong>Phone:</strong> +91 12345 67890</p>
+    <p><strong>Social Media:</strong> Follow us on Instagram, Twitter, and Discord for the latest updates, giveaways, and community events!</p>
+    <p>We value your trust and aim to build a safe, engaging gaming community. Your feedback helps us improve and grow. Thank you for being part of Harshuu Gaming Hub!</p>
   </div>
 </section>
 
 <footer>
-  <p>© 2025 Harshuu Gaming Hub | Designed by Prince</p>
+  © 2025 Harshuu Gaming Hub | Created with ❤️ for Gamers
 </footer>
+
 </body>
 </html>
