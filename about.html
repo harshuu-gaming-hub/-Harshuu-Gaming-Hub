@@ -1,15 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About - Harshuu Gaming Hub</title>
-<link rel="stylesheet" href="styles.css" />
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 100;
+  box-shadow: 0 2px 20px rgba(255, 0, 200, 0.5);
+}
+
+nav h1 {
+  font-size: 32px;
+  font-weight: 900;
+  color: #ff00c8;
+  text-shadow: 0 0 15px #ff00c8;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+nav a.active {
+  color: #ff00c8;
+  text-shadow: 0 0 10px #ff00c8;
+}
+
+.about-section {
+  padding: 140px 40px 60px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 50px;
+  color: #00eaff;
+  text-shadow: 0 0 20px #00eaff;
+  margin-bottom: 30px;
+}
+
+.about-section p {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #ccc;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.about-section strong {
+  color: #ff00c8;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #000;
+  border-top: 2px solid #ff00c8;
+  margin-top: 60px;
+  color: #00eaff;
+}
+</style>
 </head>
 <body>
+
 <nav>
-  <h1 class="logo"><a href="index.html">Harshuu Gaming Hub</a></h1>
-  <div class="nav-links">
+  <h1>🎮 Harshuu Gaming Hub</h1>
+  <div>
     <a href="index.html">Home</a>
     <a href="games.html">Games</a>
     <a href="about.html" class="active">About</a>
@@ -17,17 +105,28 @@
   </div>
 </nav>
 
-<section class="section-padding about-section">
+<section class="about-section">
   <h2>About Us</h2>
-  <p>Harshuu Gaming Hub is a dedicated platform created to bring the best gaming experience to players worldwide — completely free and safe. We provide wallpapers, game mods, news updates, and direct download links for popular and trending games.</p>
-
-  <p>Our mission is to build a trusted gaming community where players can find everything they need without intrusive ads or redirects. Whether you're exploring the vast worlds of GTA, surviving in RDR2, crafting in Minecraft, or facing horrors in Resident Evil 7, our site supports your journey.</p>
-
-  <p>We believe gaming is more than entertainment — it's a culture and passion. That’s why we are committed to a safe, user-friendly, and constantly updated hub tailored to your needs.</p>
+  <p>
+    <strong>Harshuu Gaming Hub</strong> is a fully free gaming platform created by gamers, for gamers. Our mission is to provide a safe, clean, and ad-free experience for the gaming community worldwide. Whether you're looking for the latest game downloads, stunning wallpapers, powerful mods, or gaming news—we've got you covered.
+  </p>
+  <p>
+    We understand that gamers deserve better than intrusive ads, shady redirects, and unsafe download links. That's why we built this hub with trust and transparency at its core. Every download link is tested, every mod is verified, and every piece of content is curated with care.
+  </p>
+  <p>
+    From blockbuster titles like <strong>GTA V</strong>, <strong>Red Dead Redemption 2</strong>, <strong>Minecraft</strong>, to horror classics like <strong>Resident Evil 7</strong>—we bring you detailed game information, direct download links, and community support.
+  </p>
+  <p>
+    Gaming is not just entertainment—it's a culture, a passion, and a way of life. At Harshuu Gaming Hub, we celebrate this culture by building a platform where gamers can explore, download, and connect without any hassle.
+  </p>
+  <p>
+    Join our growing community today and experience gaming like never before. We're constantly updating our library with new titles, mods, wallpapers, and features based on your feedback. Your trust is our biggest achievement.
+  </p>
 </section>
 
 <footer>
-  <p>© 2025 Harshuu Gaming Hub | Designed by Rahul</p>
+  © 2025 Harshuu Gaming Hub | Created with ❤️ for Gamers
 </footer>
+
 </body>
 </html>
