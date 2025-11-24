@@ -1,26 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Games - Harshuu Gaming Hub</title>
-<style>
-body{background:#000;color:white;font-family:'Segoe UI';padding:20px;}
-a{color:#00eaff;text-decoration:none;}
-h1{text-align:center;text-shadow:0 0 10px #ff00cc;}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;margin-top:40px;}
-.card{background:#111;padding:15px;border-radius:15px;box-shadow:0 0 10px #ff00cc;}
-.card img{width:100%;border-radius:10px;}
-</style>
+<link rel="stylesheet" href="styles.css" />
+<script defer src="scripts.js"></script>
 </head>
 <body>
+<nav>
+  <h1 class="logo"><a href="index.html">Harshuu Gaming Hub</a></h1>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="games.html" class="active">Games</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
 
-<h1>🔥 Game Library</h1>
+<section class="section-padding games-list">
+  <h2>🎮 Game Library - Detailed Info</h2>
+  <div class="games-grid">
+    <div class="game-card" data-3d>
+      <img src="assets/gta5-logo.png" alt="GTA V"/>
+      <h3>Grand Theft Auto V (GTA 5)</h3>
+      <p>A critically acclaimed open-world action-adventure game by Rockstar Games. Explore Los Santos, participate in heists and an immersive storyline!</p>
+    </div>
+    <div class="game-card" data-3d>
+      <img src="assets/rdr2-logo.png" alt="RDR2"/>
+      <h3>Red Dead Redemption 2 (RDR2)</h3>
+      <p>An epic tale of life in America’s unforgiving heartland. Master horse-riding, survival, and story-driven missions in this Western masterpiece.</p>
+    </div>
+    <div class="game-card" data-3d>
+      <img src="assets/minecraft-logo.png" alt="Minecraft"/>
+      <h3>Minecraft</h3>
+      <p>A global phenomenon sandbox game where creativity knows no bounds. Build, explore, craft, and survive alone or with friends!</p>
+    </div>
+    <div class="game-card" data-3d>
+      <img src="assets/re7-logo.png" alt="Resident Evil 7"/>
+      <h3>Resident Evil 7</h3>
+      <p>A terrifying survival horror game that revitalizes the classic franchise with a dark, atmospheric story and first-person gameplay.</p>
+    </div>
+  </div>
+  <section id="downloads" class="download-section bg-dark">
+    <h2>🚀 Direct Download Links</h2>
+    <ul class="downloads-list">
+      <li><a href="#" class="download-btn">Download GTA V</a></li>
+      <li><a href="#" class="download-btn">Download RDR2</a></li>
+      <li><a href="#" class="download-btn">Download Minecraft</a></li>
+      <li><a href="#" class="download-btn">Download Resident Evil 7</a></li>
+    </ul>
+  </section>
+</section>
 
-<div class="grid">
-    <div class="card"><img src="https://wallpapercave.com/wp/wp12009795.jpg"><p>GTA 6 (COMING)</p></div>
-    <div class="card"><img src="https://wallpapercave.com/wp/wp5124649.jpg"><p>GTA 5</p></div>
-    <div class="card"><img src="https://wallpapercave.com/wp/wp4057832.jpg"><p>RDR2</p></div>
-    <div class="card"><img src="https://wallpapercave.com/wp/wp9261220.jpg"><p>Minecraft</p></div>
-</div>
-
+<footer>
+  <p>© 2025 Harshuu Gaming Hub | Designed by Rahul</p>
+</footer>
 </body>
 </html>
