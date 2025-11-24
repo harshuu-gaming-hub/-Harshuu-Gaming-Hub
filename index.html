@@ -1,16 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Harshuu Gaming Hub - Home</title>
-<link rel="stylesheet" href="styles.css" />
-<script defer src="scripts.js"></script>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 100;
+  box-shadow: 0 2px 20px rgba(255, 0, 200, 0.5);
+}
+
+nav h1 {
+  font-size: 32px;
+  font-weight: 900;
+  color: #ff00c8;
+  text-shadow: 0 0 15px #ff00c8;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+nav a.active {
+  color: #ff00c8;
+  text-shadow: 0 0 10px #ff00c8;
+}
+
+/* Hero Section */
+.hero {
+  margin-top: 80px;
+  height: 80vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('https://wallpaperaccess.com/full/9734791.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 70px;
+  color: #fff;
+  text-shadow: 0 0 25px #ff00c8, 0 0 50px #ff00c8;
+  margin-bottom: 20px;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px #ff00c8, 0 0 30px #ff00c8;
+  }
+  to {
+    text-shadow: 0 0 30px #ff00c8, 0 0 60px #ff00c8;
+  }
+}
+
+.hero p {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #ff00c8, #00eaff);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 0 30px #ff00c8;
+  transition: 0.4s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 50px #00eaff;
+}
+
+/* Section Styling */
+.section {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 48px;
+  color: #00eaff;
+  text-shadow: 0 0 20px #00eaff;
+  margin-bottom: 40px;
+}
+
+/* Games Grid with 3D Effect */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.game-card {
+  background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 30px rgba(255, 0, 200, 0.4);
+  transition: transform 0.4s, box-shadow 0.4s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.game-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(0, 234, 255, 0.1), transparent);
+  transform: rotate(45deg);
+  transition: 0.6s;
+}
+
+.game-card:hover::before {
+  top: 100%;
+  left: 100%;
+}
+
+.game-card:hover {
+  transform: perspective(1000px) rotateY(10deg) rotateX(5deg) scale(1.05);
+  box-shadow: 0 15px 50px rgba(0, 234, 255, 0.6);
+}
+
+.game-card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.game-card h3 {
+  font-size: 24px;
+  color: #ff00c8;
+  margin-bottom: 10px;
+}
+
+.game-card p {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Wallpapers Section */
+.wallpapers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.wallpapers-grid img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 234, 255, 0.5);
+  transition: transform 0.3s;
+}
+
+.wallpapers-grid img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 40px rgba(255, 0, 200, 0.8);
+}
+
+/* Download Section */
+.download-section {
+  background: linear-gradient(135deg, #1a1a1a, #0a0a0a);
+  padding: 60px 40px;
+  border-radius: 20px;
+  margin: 40px;
+  box-shadow: 0 0 40px rgba(255, 0, 200, 0.6);
+}
+
+.download-section h2 {
+  color: #00eaff;
+  margin-bottom: 20px;
+}
+
+.download-section p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #000;
+  border-top: 2px solid #ff00c8;
+  margin-top: 60px;
+  color: #00eaff;
+}
+</style>
 </head>
 <body>
+
 <nav>
-  <h1 class="logo"><img src="assets/gta6-logo.png" alt="GTA 6 Logo" class="logo-img" />Harshuu Gaming Hub</h1>
-  <div class="nav-links">
+  <h1>🎮 Harshuu Gaming Hub</h1>
+  <div>
     <a href="index.html" class="active">Home</a>
     <a href="games.html">Games</a>
     <a href="about.html">About</a>
@@ -20,43 +251,55 @@
 
 <section class="hero">
   <h2>🔥 Welcome to Harshuu Gaming Hub 🔥</h2>
-  <p>Your ultimate destination for gaming news, wallpapers, mods, and free downloads!</p>
-  <a href="games.html" class="btn">Explore Games Library</a>
+  <p>Your Ultimate Destination for Gaming • Mods • Wallpapers • Free Downloads</p>
+  <a class="btn" href="games.html">Explore Games</a>
 </section>
 
-<section class="wallpapers-section section-padding">
-  <h2>🎨 Gaming Wallpapers</h2>
-  <div class="wallpapers-grid">
-    <img src="assets/wallpaper1.jpg" alt="Gaming Wallpaper 1" />
-    <img src="assets/wallpaper2.jpg" alt="Gaming Wallpaper 2" />
-    <img src="assets/wallpaper3.jpg" alt="Gaming Wallpaper 3" />
-    <img src="assets/wallpaper4.jpg" alt="Gaming Wallpaper 4" />
-  </div>
-  <a href="games.html" class="btn btn-small">See All Wallpapers & Mods</a>
-</section>
-
-<section class="top-games section-padding">
-  <h2>🔥 Top Trending Games</h2>
+<section class="section">
+  <h2>🎮 Top Trending Games</h2>
   <div class="games-grid">
-    <div class="game-card" data-3d><img src="assets/gta5-logo.png" alt="GTA V"/></div>
-    <div class="game-card" data-3d><img src="assets/rdr2-logo.png" alt="RDR2"/></div>
-    <div class="game-card" data-3d><img src="assets/minecraft-logo.png" alt="Minecraft"/></div>
-    <div class="game-card" data-3d><img src="assets/re7-logo.png" alt="Resident Evil 7"/></div>
+    <div class="game-card">
+      <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/2fba73c8-bf1b-4ee6-9fc1-c3f27ffd544d" alt="GTA V">
+      <h3>GTA V</h3>
+      <p>An epic open-world action-adventure game set in Los Santos. Experience heists, missions, and endless exploration!</p>
+    </div>
+    <div class="game-card">
+      <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/5e44be59-f53a-4080-a7a4-685949334231" alt="RDR2">
+      <h3>Red Dead Redemption 2</h3>
+      <p>A gripping Western tale of survival and redemption. Immerse yourself in America's rugged heartland.</p>
+    </div>
+    <div class="game-card">
+      <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/a802ce2c-f9e6-4a36-ada5-454688e71cb4" alt="Minecraft">
+      <h3>Minecraft</h3>
+      <p>The ultimate sandbox game! Build, explore, survive, and create your own world with limitless possibilities.</p>
+    </div>
+    <div class="game-card">
+      <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/707f6e83-18aa-47a1-b810-2c14edfc5504" alt="Resident Evil 7">
+      <h3>Resident Evil 7</h3>
+      <p>A terrifying survival horror masterpiece. Face your fears in a dark, atmospheric first-person experience.</p>
+    </div>
   </div>
-  <p class="game-descriptions">
-    Explore thrilling open worlds of GTA V and RDR2, the creative universe of Minecraft and the horror classic Resident Evil 7.
-    Download mods, wallpapers, and more here!
-  </p>
 </section>
 
-<section class="download-section section-padding">
+<section class="section">
+  <h2>🖼️ Gaming Wallpapers</h2>
+  <div class="wallpapers-grid">
+    <img src="https://wallpapercave.com/wp/wp12009795.jpg" alt="Wallpaper 1">
+    <img src="https://wallpaperaccess.com/full/2161381.jpg" alt="Wallpaper 2">
+    <img src="https://wallpapercave.com/wp/wp9785404.jpg" alt="Wallpaper 3">
+    <img src="https://wallpapercave.com/wp/wp11878741.jpg" alt="Wallpaper 4">
+  </div>
+</section>
+
+<section class="download-section">
   <h2>💥 Fast & Safe Game Downloads</h2>
-  <p>Enjoy seamless, ad-free downloads with direct links. Your gaming adventure starts here!</p>
-  <a href="games.html#downloads" class="btn btn-large">Start Downloading Now</a>
+  <p>Download your favorite games with lightning-fast speed, no ads, no redirects. Start your adventure now!</p>
+  <a class="btn" href="games.html">Download Now</a>
 </section>
 
 <footer>
-  <p>© 2025 Harshuu Gaming Hub | Designed by Rahul</p>
+  © 2025 Harshuu Gaming Hub | Created with ❤️ for Gamers
 </footer>
+
 </body>
 </html>
