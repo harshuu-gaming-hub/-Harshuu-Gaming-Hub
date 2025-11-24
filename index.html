@@ -6,83 +6,85 @@
 <title>Harshuu Gaming Hub</title>
 
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #0d0d0d;
-        color: #fff;
-    }
-    header {
-        background: #1a1a1a;
-        padding: 20px;
-        text-align: center;
-        font-size: 28px;
-        font-weight: bold;
-        letter-spacing: 2px;
-        border-bottom: 2px solid #333;
-    }
-    .section {
-        text-align: center;
-        padding: 40px 20px;
-    }
-    .btn {
-        background: #ff4747;
-        padding: 12px 25px;
-        border-radius: 5px;
-        display: inline-block;
-        margin-top: 20px;
-        color: #fff;
-        text-decoration: none;
-        font-weight: bold;
-    }
-    .games {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
-        padding: 20px;
-    }
-    .game-card {
-        background: #1a1a1a;
-        padding: 20px;
-        border-radius: 10px;
-        text-align: center;
-        border: 1px solid #333;
-    }
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+body{background:#000;color:#fff;overflow-x:hidden;}
+
+nav{width:100%;padding:20px 40px;display:flex;justify-content:space-between;
+align-items:center;background:rgba(0,0,0,0.7);position:fixed;top:0;z-index:10;
+backdrop-filter:blur(10px);}
+nav h1{font-size:30px;font-weight:900;color:#ff00c8;text-shadow:0 0 10px #ff00c8;}
+nav a{color:#fff;text-decoration:none;margin-left:30px;font-size:18px;transition:.3s;}
+nav a:hover{color:#00eaff;text-shadow:0 0 10px #00eaff;}
+
+.hero{margin-top:100px;height:70vh;background:url('https://wallpaperaccess.com/full/9734791.jpg') center/cover no-repeat;position:relative;}
+.hero::after{content:"";position:absolute;top:0;left:0;width:100%;height:100%;
+background:rgba(0,0,0,.6);}
+.hero h2,.hero p,.hero a{position:relative;text-align:center;color:#fff;}
+.hero h2{padding-top:120px;font-size:60px;text-shadow:0 0 15px #ff00ff;}
+.hero p{margin-top:20px;font-size:22px;}
+.btn{margin-top:30px;padding:15px 30px;background:#ff00c8;color:#fff;border-radius:8px;
+font-size:20px;text-decoration:none;box-shadow:0 0 20px #ff00c8;transition:.3s;}
+.btn:hover{background:#00f5ff;box-shadow:0 0 20px #00f5ff;}
+
+.section{padding:60px 40px;}
+.section h2{text-align:center;font-size:40px;color:#00eaff;text-shadow:0 0 10px #00eaff;}
+
+.games-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;margin-top:30px;}
+.game-card{background:#0a0a0a;border-radius:15px;padding:15px;box-shadow:0 0 15px #0033ff;
+transition:.4s;transform:perspective(600px) rotateY(0);}
+.game-card:hover{transform:perspective(600px) rotateY(10deg);box-shadow:0 0 20px #00eaff;}
+.game-card img{width:100%;border-radius:10px;}
+
+.download-box{background:#111;padding:30px;border-radius:15px;text-align:center;
+box-shadow:0 0 20px #ff00aa;}
+.download-btn{margin-top:15px;padding:15px 30px;font-size:18px;background:#00ffcc;
+border-radius:10px;text-decoration:none;color:#000;font-weight:800;
+box-shadow:0 0 15px #00ffcc;transition:.3s;}
+.download-btn:hover{background:#00eaff;}
+
+footer{text-align:center;padding:20px;background:#000;margin-top:40px;border-top:1px solid #222;}
+
 </style>
 
 </head>
 <body>
 
-<header>🎮 Harshuu Gaming Hub</header>
-
-<div class="section">
-    <h2>Welcome to the Ultimate Gaming Website</h2>
-    <p>Games • Tutorials • Mods • Downloads — Sab yaha milega!</p>
-    <a href="#" class="btn">Explore Now</a>
-</div>
-
-<h2 style="text-align:center;">🔥 Popular Games</h2>
-<div class="games">
-    <div class="game-card">
-        <h3>Minecraft</h3>
-        <p>Shaders • Mods • Builds</p>
+<nav>
+    <h1>Harshuu Gaming Hub</h1>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
     </div>
+</nav>
 
-    <div class="game-card">
-        <h3>GTA V</h3>
-        <p>Mods • Trainers • Fixes</p>
-    </div>
+<section class="hero">
+    <h2>🔥 Welcome to Harshuu Gaming Hub 🔥</h2>
+    <p>Gaming • Mods • Wallpapers • Free Downloads</p>
+    <a class="btn" href="games.html">Explore Games</a>
+</section>
 
-    <div class="game-card">
-        <h3>BGMI</h3>
-        <p>Tips • Sensitivity • Settings</p>
+<section class="section">
+    <h2>🎮 Top Trending Games</h2>
+    <div class="games-grid">
+        <div class="game-card"><img src="https://wallpapercave.com/wp/wp12009795.jpg"></div>
+        <div class="game-card"><img src="https://wallpaperaccess.com/full/2161381.jpg"></div>
+        <div class="game-card"><img src="https://wallpapercave.com/wp/wp9785404.jpg"></div>
+        <div class="game-card"><img src="https://wallpapercave.com/wp/wp11878741.jpg"></div>
     </div>
+</section>
 
-    <div class="game-card">
-        <h3>Free Fire</h3>
-        <p>Configs • Sensitivity • Tricks</p>
+<section class="section">
+    <h2>💥 Direct Game Downloads</h2>
+    <div class="download-box">
+        <p>Download games with fast speed, no ads, no redirects.</p>
+        <a class="download-btn" href="#">Download Now</a>
     </div>
-</div>
+</section>
+
+<footer>© 2025 Harshuu Gaming Hub</footer>
 
 </body>
 </html>
