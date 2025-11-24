@@ -21,30 +21,37 @@ nav {
   position: fixed;
   width: 100%;
   top: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
+  padding: 15px 20px;
   z-index: 100;
   box-shadow: 0 2px 20px rgba(255, 0, 200, 0.5);
+  flex-wrap: wrap;
 }
 
 nav h1 {
-  font-size: 32px;
+  font-size: clamp(20px, 5vw, 32px);
   font-weight: 900;
   color: #ff00c8;
   text-shadow: 0 0 15px #ff00c8;
 }
 
+nav .nav-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
 nav a {
   color: #fff;
   text-decoration: none;
-  margin-left: 30px;
-  font-size: 18px;
+  font-size: clamp(14px, 3vw, 18px);
   font-weight: 600;
   transition: 0.3s;
+  padding: 5px 10px;
 }
 
 nav a:hover {
@@ -55,28 +62,30 @@ nav a:hover {
 nav a.active {
   color: #ff00c8;
   text-shadow: 0 0 10px #ff00c8;
+  border-bottom: 2px solid #ff00c8;
 }
 
 .about-section {
-  padding: 140px 40px 60px;
+  padding: 120px 20px 40px;
   max-width: 900px;
   margin: auto;
   text-align: center;
 }
 
 .about-section h2 {
-  font-size: 50px;
+  font-size: clamp(32px, 7vw, 50px);
   color: #00eaff;
   text-shadow: 0 0 20px #00eaff;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .about-section p {
-  font-size: 20px;
+  font-size: clamp(15px, 3.5vw, 20px);
   line-height: 1.8;
   color: #ccc;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   text-align: justify;
+  padding: 0 10px;
 }
 
 .about-section strong {
@@ -85,11 +94,12 @@ nav a.active {
 
 footer {
   text-align: center;
-  padding: 30px;
+  padding: 20px;
   background: #000;
   border-top: 2px solid #ff00c8;
-  margin-top: 60px;
+  margin-top: 40px;
   color: #00eaff;
+  font-size: clamp(12px, 3vw, 16px);
 }
 </style>
 </head>
@@ -97,7 +107,7 @@ footer {
 
 <nav>
   <h1>🎮 Harshuu Gaming Hub</h1>
-  <div>
+  <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="games.html">Games</a>
     <a href="about.html" class="active">About</a>
